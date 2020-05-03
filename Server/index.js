@@ -8,6 +8,8 @@ const http = require('http');
 const WebSocket = require('ws');
 const PORT = process.env.PORT || 80;
 
+
+
 let covid;
 const server = http.createServer(function (req, res) {
   res.writeHead(200, { 'Content-Type': 'text/plain' });

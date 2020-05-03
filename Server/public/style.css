@@ -1,0 +1,29 @@
+.tables table {
+    border-collapse: collapse;
+    width: 100%;
+    margin:auto;
+}
+th {
+    text-align: center;
+}
+.tables table, td, th, caption {
+    text-align:center;
+    border: 1px solid #ddd;
+    padding: 8px;
+    align-items: center;
+}
+
+.tables table tr:nth-child(even){background-color: #f2f2f2;}
+
+.tables table tr:hover {background-color: #ddd;}
+
+.tables table th, caption {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tables table caption {
+    background-color:#025B12;
+}
