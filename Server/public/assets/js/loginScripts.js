@@ -21,7 +21,7 @@ async function onSuccess(googleUser) {
         .catch(err => console.log(err))
     sessionStorage.setItem('userKey', userData.userkey);
     gapi.auth2.getAuthInstance().signOut();
-    window.location.href = "landing.html";
+    window.location.href = "map.html";
 }
 
 function onFailure(error) {
@@ -62,6 +62,6 @@ async function login() {
         errorBox.innerText = "Incorrect email address.";
     } else {
         sessionStorage.setItem('userKey', result.data);
-        window.location.href = "landing.html";
+        window.location.href = "map.html";
     }
 }

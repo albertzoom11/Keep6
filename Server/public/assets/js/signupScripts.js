@@ -21,7 +21,7 @@ async function onSuccess(googleUser) {
         .catch(err => console.log(err))
     sessionStorage.setItem('userKey', userData.userkey);
     gapi.auth2.getAuthInstance().signOut();
-    window.location.href = "landing.html";
+    window.location.href = "map.html";
 }
 
 function onFailure(error) {
@@ -76,6 +76,6 @@ async function signup() {
         errorBox.innerText = 'Your passwords don\'t match.';
     } else {
         sessionStorage.setItem('userKey', result.data);
-        window.location.href = "landing.html";
+        window.location.href = "map.html";
     }
 }
