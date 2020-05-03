@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disease Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+  </head>
+  <body>
+    <script type="text/javascript" src="../assets/js/coronaNews.js" defer></script>
+    <script type="text/javascript" src="../assets/js/test.js" defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0Gy3asn6Fk00IIY3wdatOKU0PM7t4jUI&callback=initMap"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCHS03Toizy9z4e4FHEOPtDS8hkX1bIASY",
+        authDomain: "csewebsiteproject.firebaseapp.com",
+        databaseURL: "https://csewebsiteproject.firebaseio.com",
+        projectId: "csewebsiteproject",
+        storageBucket: "csewebsiteproject.appspot.com",
+        messagingSenderId: "487693454058",
+        appId: "1:487693454058:web:5182d35ac747c6b451a593",
+        measurementId: "G-P4EEY1X007"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <h1>Live Disease Tracking Map</h1>
+
+    <div class="navbar">
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <div class="subnav" id="subnav-top">
+          <button class="subnavbtn" id='subnavbtn-top'>Diseases</button>
+          <div class="subnav-content" id='subnav-content-top'>
+            <div class="subnav" id="subnav-dropdown-corona">
+              <button class="subnavbtn dropdownbtn">Coronavirus</button>
+              <div class="subnav-content" id="subnav-content-dropdown-corona">
+                <a href="coronavirus.html">About</a>
+                <a href="coronavirus-news.html">News</a>
+                <a href="coronavirus-help.html">Get Help</a>
+              </div>
+            </div>
+            <div class="subnav" id="subnav-dropdown-influenza" style="position:absolute;top:40px;">
+              <button class="subnavbtn dropdownbtn">Influenza</button>
+              <div class="subnav-content" id="subnav-content-dropdown-influenza">
+                <a href="influenza.html">About</a>
+                <a href="influenza-news.html">News</a>
+                <a href="influenza-help.html">Get Help</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <li><a href="report.html">Report Case</a></li>
+      </ul>
+    </div>
+
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+    <div class="tables">
+      <table id="CoronavirusMap">
+        <div id="main">
+          <caption>Coronavirus Tracker</caption>
+        </div>
+        <tr>
+          <th>Timestamp</th>
+          <th>Location</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+        <tr>
+          <td>2020-03-23 12:34:04 PM</td>
+          <td>Marlboro, NJ</td>
+          <td>51.508742, -0.120850</td>
+          <td>51.508742, -0.120850</td>
+        </tr>
+        <tr>
+          <td>2020-03-24 09:32:04 AM</td>
+          <td>Freehold, NJ</td>
+          <td>51.508742, -0.120850</td>
+          <td>51.508742, -0.120850</td>
+        </tr>
+      </table>
+      <br>
+      <table id="InfluenzaMap">
+        <caption>Influenza Tracker</caption>
+        <tr>
+          <th>Timestamp</th>
+          <th>Location</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+        <tr>
+          <td>2020-03-23 12:34:04 PM</td>
+          <td>Manalapan, NJ</td>
+          <td>51.508742, -0.120850</td>
+          <td>51.508742, -0.120850</td>
+        </tr>
+        <tr>
+          <td>2020-03-24 09:32:04 AM</td>
+          <td>Lincroft, NJ</td>
+          <td>51.508742, -0.120850</td>
+          <td>51.508742, -0.120850</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+  </body>
+
+</html>

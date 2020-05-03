@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "514529736479",
+    "firebase_url": "https://keep6-750b8.firebaseio.com",
+    "project_id": "keep6-750b8",
+    "storage_bucket": "keep6-750b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514529736479:android:b21a06ff5cff9b1c03e22a",
+        "android_client_info": {
+          "package_name": "us.macrotechsolutions.keep6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514529736479-18a2r5pf12habo9os0v4e2btnsqiqkgc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "us.macrotechsolutions.keep6",
+            "certificate_hash": "e5ad3a958a39d41472fc6f964e7ab6eb910057b6"
+          }
+        },
+        {
+          "client_id": "514529736479-6kf6tbglro6b22fle0hi7d3cb23fsb1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVYkMLli2IBTKt0_vGhF9Dde0jegt4L4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514529736479-6kf6tbglro6b22fle0hi7d3cb23fsb1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
