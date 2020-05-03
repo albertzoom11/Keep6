@@ -89,7 +89,7 @@ express()
       userID = key;
       whitelist = myVal[key].whitelist;
     }
-    if (whitelist === null || whitelist.length == 0) {
+    if (whitelist === null || whitelist === undefined || whitelist.length == 0) {
       forceWhitelist = false;
     } else {
       let arr = whitelist.split(", ");
