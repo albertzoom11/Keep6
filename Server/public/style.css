@@ -3,11 +3,13 @@
     width: 100%;
     margin:auto;
 }
+
 th {
     text-align: center;
 }
+
 .tables table, td, th, caption {
-    text-align:center;
+    text-align: center;
     border: 1px solid #ddd;
     padding: 8px;
     align-items: center;
