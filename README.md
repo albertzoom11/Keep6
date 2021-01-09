@@ -8,19 +8,19 @@ Keep6 is a mobile app, Arduino hardware, and website based platform that encoura
 
 ## How we built it
 
-###Hardware
+### Hardware
 
  We used an Arduino Mega with an MFRC522 module for RFID distance functionality and an ESP8266 module for public server communication. A portable device was made for users to carry with them in their outdoors excursions. These RFID sensors are used to track the proximity of neighboring users and relay that to a server. Compared to Bluetooth and GPS location services, RFID distancing is accurate to the foot and has a very large range. Furthermore, because RFID is secure, does not track users’ data or absolute location, and only returns relative distances with other users, there are no privacy concerns for the user.
 
-###Server
+### Server
 
 The server is the middleman for the entire project. It handles all requests coming in from the arduino, iphone app, and the website. The first process that the server handles is users logging and signing in. From there the server gets a request from the arduino to update the device location. This information is then sent to a web socket that the iphone also connects to in order to view the location of other arduino devices in the area. The server then calculates the distance between devices in order to determine whether the user is within 6 feet of another user.
 
-###App
+### App
 
 We created the app using the Flutter programming language and it allows you to connect to your RFID reader. This app will allow you to see if you are near someone else and notify you of your risk of COVID and the distance between you and the closest person. It also gives the user the option to set whitelists for people that are in their family by adding their email addresses. The app collects information on whether or not the user has been diagnosed with COVID-19 and accordingly updates the risk levels for those around them. All of the app communications are routes through the server to enhance security.
 
-###Website
+### Website
 
 We created the website using a Google Maps API paired with javascript code marking concentrated areas of people on the map. HTML/CSS was used for the formatting of the website which allows user login to view the personal coronavirus information in the form of maps and tables that is obtained through the server.
 
